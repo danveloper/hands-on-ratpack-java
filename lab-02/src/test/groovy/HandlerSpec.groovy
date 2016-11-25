@@ -22,8 +22,8 @@ class HandlerSpec extends Specification {
     when: "a GET request is sent with no path"
     testClient.get() // we don't have to assign the ReceivedResponse returned as TestHttpClient will keep track of this for us
 
-    then: "a response is returned with body text of 'Hello Devoxx!'"
-    testClient.response.body.text == "Hello Devoxx!" // `testClient.response` is the ReceivedResponse from the last request sent
+    then: "a response is returned with body text of 'Hello Ratpack!'"
+    testClient.response.body.text == "Hello Ratpack!" // `testClient.response` is the ReceivedResponse from the last request sent
 
     /*
     Hint:
@@ -115,7 +115,7 @@ class HandlerSpec extends Specification {
 
   def "08 - can request a static asset"() {
     expect:
-    getText("assets/js/app.js") == "var message = 'Hello Devoxx!';"
+    getText("assets/js/app.js") == "var message = 'Hello Ratpack!';"
 
     /*
     Hint:
@@ -127,7 +127,7 @@ class HandlerSpec extends Specification {
 
   def "09 - can serve an index file"() {
     expect:
-    getText("home/") == "<html><body><p>Hello Devoxx!</p></body></html>"
+    getText("home/") == "<html><body><p>Hello Ratpack!</p></body></html>"
 
     /*
     Hint:

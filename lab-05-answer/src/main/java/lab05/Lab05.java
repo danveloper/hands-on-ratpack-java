@@ -18,10 +18,10 @@ public class Lab05 {
         .module(HandlebarsModule.class)
       ))
       .handlers(chain -> chain
-        .get(ctx -> ctx.render("Hello Devoxx!"))
+        .get(ctx -> ctx.render("Hello Ratpack!"))
         .get("welcome", ctx ->
           ctx.render(
-            handlebarsTemplate("index", modelBuilder -> modelBuilder.put("welcomeMessage", "Hello Devoxx!"))
+            handlebarsTemplate("index", modelBuilder -> modelBuilder.put("welcomeMessage", "Hello Ratpack!"))
           )
         )
         .get("api/book/:isbn", ctx -> {

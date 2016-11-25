@@ -1,9 +1,8 @@
 package lab06;
 
-import org.pac4j.http.client.BasicAuthClient;
-import org.pac4j.http.credentials.SimpleTestUsernamePasswordAuthenticator;
+import org.pac4j.http.client.indirect.IndirectBasicAuthClient;
+import org.pac4j.http.credentials.authenticator.test.SimpleTestUsernamePasswordAuthenticator;
 import org.pac4j.http.profile.HttpProfile;
-import org.pac4j.http.profile.UsernameProfileCreator;
 import ratpack.guice.Guice;
 import ratpack.handling.Context;
 import ratpack.handling.InjectionHandler;
@@ -23,9 +22,9 @@ public class Lab06 {
           }))
           .handlers(chain ->
             chain
-              .all(RatpackPac4j.authenticator(new BasicAuthClient(new SimpleTestUsernamePasswordAuthenticator(), new UsernameProfileCreator())))
+              .all(RatpackPac4j.authenticator(new IndirectBasicAuthClient(new SimpleTestUsernamePasswordAuthenticator())))
               .get(ctx -> ctx.render("Root GET"))
-              .all(RatpackPac4j.requireAuth(BasicAuthClient.class))
+              .all(RatpackPac4j.requireAuth(IndirectBasicAuthClient.class))
               .get("secure", new InjectionHandler() {
                 void handle(Context ctx, HttpProfile profile) {
                   ctx.render("Secure stuff for " + profile.getUsername() + "!");

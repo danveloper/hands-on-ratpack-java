@@ -14,7 +14,7 @@ class RenderSpec extends Specification {
 
   def "01 - can render a String"() {
     expect:
-    getText() == "Hello Devoxx!"
+    getText() == "Hello Ratpack!"
 
     /*
     Hint:
@@ -28,7 +28,7 @@ class RenderSpec extends Specification {
     getText("welcome") == '''<!DOCTYPE html>
       |<html>
       |<body>
-      |  <p>Hello Devoxx!</p>
+      |  <p>Hello Ratpack!</p>
       |</body>
       |</html>
       |'''.stripMargin()

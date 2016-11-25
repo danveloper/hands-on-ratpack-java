@@ -81,7 +81,7 @@ public class Lab01 {
                     .dir("pages").indexFiles("index.html")
                 )
                 .all(context ->
-                    context.getResponse().send("Hello Devoxx!")
+                    context.getResponse().send("Hello Ratpack!")
                 )
           )
     );

@@ -1,1 +1,1 @@
-var message = 'Hello Devoxx!';
+var message = 'Hello Ratpack!';
