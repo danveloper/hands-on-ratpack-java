@@ -26,7 +26,7 @@ public class Lab01 {
                         binding.getBoundTo() :
                         binding.getBoundTo().substring(0, binding.getBoundTo().indexOf("/"));
 
-                      log.info("Warning, request for {}", username);
+                      log.info("Incoming request for {}", username);
                       context.next();
                     })
                     .prefix(":username", usernameChain ->
