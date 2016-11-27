@@ -110,7 +110,7 @@ repositories {
 
 ---
 
-### Ratpack is _Java web framework_, written entirely for Java 8. Its internal API design allows DSLs to be built in other languages. Robust integration with Groovy to provide a seamless DSL.
+### Ratpack is a _Java web framework_, written entirely for Java 8. Its internal API design allows DSLs to be built in other languages. Robust integration with Groovy to provide a seamless DSL.
 
 ```groovy
 import static ratpack.groovy.Groovy.ratpack
@@ -147,7 +147,7 @@ ratpack {
 
 ## How the Labs are Structured
 
-* Clone the repo: https://github.com/danveloper/hands-on-ratpack
+* Clone the repo: https://github.com/danveloper/hands-on-ratpack-java
 * Each lab has two directories
   - `lab01` has skeleton structure and failing tests you will work to make pass
   - `lab01-answer` has the example solution
