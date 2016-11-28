@@ -12,7 +12,7 @@ Take advantage of Gradle's [continuous mode](https://docs.gradle.org/current/use
 
 example:
 
-`./gradlew :lab-01:test --continuous`
+`./gradlew -t :lab-01:test`
 
 ## IDE Integration
 If you're using IntelliJ execute `./gradlew idea` before getting started.
